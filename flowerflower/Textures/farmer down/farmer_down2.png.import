@@ -1,0 +1,32 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/farmer_down2.png-bb19902352c2132a5983bac3be8c8c8a.stex"
+
+[deps]
+
+source_file="res://Textures/farmer down/farmer_down2.png"
+source_md5="a2e4e8214d654900aedf53e153cd19f0"
+
+dest_files=[ "res://.import/farmer_down2.png-bb19902352c2132a5983bac3be8c8c8a.stex" ]
+dest_md5="5102205eb8a4595f3f6602866d36a250"
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0

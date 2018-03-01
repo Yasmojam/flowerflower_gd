@@ -1,0 +1,154 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Textures/grass.tres" type="TileSet" id=1]
+[ext_resource path="res://Instances/Dirt.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Instances/Farmer.tscn" type="PackedScene" id=3]
+
+[node name="World" type="Node2D" index="0"]
+
+[node name="TileMap-grass" type="TileMap" parent="." index="0"]
+
+position = Vector2( -64, 0 )
+scale = Vector2( 2, 2 )
+mode = 0
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 32, 32 )
+cell_quadrant_size = 16
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 0
+cell_y_sort = false
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 1
+collision_mask = 1
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray( 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 5, 0, 0, 6, 0, 0, 7, 0, 0, 8, 0, 0, 9, 0, 0, 10, 0, 0, 11, 0, 0, 12, 0, 0, 65537, 0, 0, 65538, 0, 0, 65539, 0, 0, 65540, 0, 0, 65541, 0, 0, 65542, 0, 0, 65543, 0, 0, 65544, 0, 0, 65545, 0, 0, 65546, 0, 0, 65547, 0, 0, 65548, 0, 0, 131073, 0, 0, 131074, 0, 0, 131075, 0, 0, 131076, 0, 0, 131077, 0, 0, 131078, 0, 0, 131079, 0, 0, 131080, 0, 0, 131081, 0, 0, 131082, 0, 0, 131083, 0, 0, 131084, 0, 0, 196609, 0, 0, 196610, 0, 0, 196611, 0, 0, 196612, 0, 0, 196613, 0, 0, 196614, 0, 0, 196615, 0, 0, 196616, 0, 0, 196617, 0, 0, 196618, 0, 0, 196619, 0, 0, 196620, 0, 0, 262145, 0, 0, 262146, 0, 0, 262147, 0, 0, 262148, 0, 0, 262149, 0, 0, 262150, 0, 0, 262151, 0, 0, 262152, 0, 0, 262153, 0, 0, 262154, 0, 0, 262155, 0, 0, 262156, 0, 0, 327681, 0, 0, 327682, 0, 0, 327683, 0, 0, 327684, 0, 0, 327685, 0, 0, 327686, 0, 0, 327687, 0, 0, 327688, 0, 0, 327689, 0, 0, 327690, 0, 0, 327691, 0, 0, 327692, 0, 0, 393217, 0, 0, 393218, 0, 0, 393219, 0, 0, 393220, 0, 0, 393221, 0, 0, 393222, 0, 0, 393223, 0, 0, 393224, 0, 0, 393225, 0, 0, 393226, 0, 0, 393227, 0, 0, 393228, 0, 0, 458753, 0, 0, 458754, 0, 0, 458755, 0, 0, 458756, 0, 0, 458757, 0, 0, 458758, 0, 0, 458759, 0, 0, 458760, 0, 0, 458761, 0, 0, 458762, 0, 0, 458763, 0, 0, 458764, 0, 0, 524289, 0, 0, 524290, 0, 0, 524291, 0, 0, 524292, 0, 0, 524293, 0, 0, 524294, 0, 0, 524295, 0, 0, 524296, 0, 0, 524297, 0, 0, 524298, 0, 0, 524299, 0, 0, 524300, 0, 0, 589825, 0, 0, 589826, 0, 0, 589827, 0, 0, 589828, 0, 0, 589829, 0, 0, 589830, 0, 0, 589831, 0, 0, 589832, 0, 0, 589833, 0, 0, 589834, 0, 0, 589835, 0, 0, 589836, 0, 0, 655361, 0, 0, 655362, 0, 0, 655363, 0, 0, 655364, 0, 0, 655365, 0, 0, 655366, 0, 0, 655367, 0, 0, 655368, 0, 0, 655369, 0, 0, 655370, 0, 0, 655371, 0, 0, 655372, 0, 0 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Boundary" type="StaticBody2D" parent="." index="1"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Boundary" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( 768, 0, 864, 0, 864, 800, -96, 800, -96, -96, 864, -96, 864, 0, 0, 0, 0, 704, 768, 704 )
+
+[node name="All the dirt" type="Node2D" parent="." index="2"]
+
+editor/display_folded = true
+position = Vector2( 32, 32 )
+
+[node name="Dirt" parent="All the dirt" index="0" instance=ExtResource( 2 )]
+
+position = Vector2( 192, 96 )
+
+[node name="Dirt2" parent="All the dirt" index="1" instance=ExtResource( 2 )]
+
+position = Vector2( 256, 96 )
+
+[node name="Dirt3" parent="All the dirt" index="2" instance=ExtResource( 2 )]
+
+position = Vector2( 256, 160 )
+
+[node name="Dirt4" parent="All the dirt" index="3" instance=ExtResource( 2 )]
+
+position = Vector2( 192, 160 )
+
+[node name="Dirt5" parent="All the dirt" index="4" instance=ExtResource( 2 )]
+
+position = Vector2( 448, 96 )
+
+[node name="Dirt6" parent="All the dirt" index="5" instance=ExtResource( 2 )]
+
+position = Vector2( 512, 160 )
+
+[node name="Dirt7" parent="All the dirt" index="6" instance=ExtResource( 2 )]
+
+position = Vector2( 448, 160 )
+
+[node name="Dirt8" parent="All the dirt" index="7" instance=ExtResource( 2 )]
+
+position = Vector2( 512, 288 )
+
+[node name="Dirt9" parent="All the dirt" index="8" instance=ExtResource( 2 )]
+
+position = Vector2( 448, 352 )
+
+[node name="Dirt10" parent="All the dirt" index="9" instance=ExtResource( 2 )]
+
+position = Vector2( 512, 96 )
+
+[node name="Dirt11" parent="All the dirt" index="10" instance=ExtResource( 2 )]
+
+position = Vector2( 448, 288 )
+
+[node name="Dirt12" parent="All the dirt" index="11" instance=ExtResource( 2 )]
+
+position = Vector2( 512, 352 )
+
+[node name="Dirt13" parent="All the dirt" index="12" instance=ExtResource( 2 )]
+
+position = Vector2( 512, 480 )
+
+[node name="Dirt14" parent="All the dirt" index="13" instance=ExtResource( 2 )]
+
+position = Vector2( 448, 480 )
+
+[node name="Dirt15" parent="All the dirt" index="14" instance=ExtResource( 2 )]
+
+position = Vector2( 448, 544 )
+
+[node name="Dirt16" parent="All the dirt" index="15" instance=ExtResource( 2 )]
+
+position = Vector2( 512, 544 )
+
+[node name="Dirt17" parent="All the dirt" index="16" instance=ExtResource( 2 )]
+
+position = Vector2( 256, 544 )
+
+[node name="Dirt18" parent="All the dirt" index="17" instance=ExtResource( 2 )]
+
+position = Vector2( 256, 480 )
+
+[node name="Dirt19" parent="All the dirt" index="18" instance=ExtResource( 2 )]
+
+position = Vector2( 192, 480 )
+
+[node name="Dirt20" parent="All the dirt" index="19" instance=ExtResource( 2 )]
+
+position = Vector2( 192, 544 )
+
+[node name="Dirt21" parent="All the dirt" index="20" instance=ExtResource( 2 )]
+
+position = Vector2( 256, 288 )
+
+[node name="Dirt22" parent="All the dirt" index="21" instance=ExtResource( 2 )]
+
+position = Vector2( 192, 288 )
+
+[node name="Dirt23" parent="All the dirt" index="22" instance=ExtResource( 2 )]
+
+position = Vector2( 192, 352 )
+
+[node name="Dirt24" parent="All the dirt" index="23" instance=ExtResource( 2 )]
+
+position = Vector2( 256, 352 )
+
+[node name="Farmer" type="Node2D" parent="." index="3"]
+
+editor/display_folded = true
+
+[node name="Farmer" parent="Farmer" index="0" instance=ExtResource( 3 )]
+
+
