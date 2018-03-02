@@ -4,7 +4,7 @@
 [ext_resource path="res://Instances/Dirt.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Instances/Farmer.tscn" type="PackedScene" id=3]
 
-[node name="World" type="Node2D" index="0"]
+[node name="World" type="Node2D"]
 
 [node name="TileMap-grass" type="TileMap" parent="." index="0"]
 
@@ -150,5 +150,7 @@ position = Vector2( 256, 352 )
 editor/display_folded = true
 
 [node name="Farmer" parent="Farmer" index="0" instance=ExtResource( 3 )]
+
+pix_per_sec = 128
 
 

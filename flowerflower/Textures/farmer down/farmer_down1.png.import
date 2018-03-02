@@ -10,7 +10,7 @@ source_file="res://Textures/farmer down/farmer_down1.png"
 source_md5="af672fd5947f970ddd70e316af45e0fb"
 
 dest_files=[ "res://.import/farmer_down1.png-8fd930821fe2f1fe948983b436cc1183.stex" ]
-dest_md5="8d53958c95a23cb1f122648129d5d21c"
+dest_md5="b6cabcd2af9e16857da25007759e9fbe"
 
 [params]
 
@@ -19,7 +19,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

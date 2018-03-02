@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/farmer_down2.png-bb19902352c2132a5983bac3be8c8c8a.stex"
+path="res://.import/farmer side2.png-8fd6168a05cf3ec1d4d996919651fe3f.stex"
 
 [deps]
 
-source_file="res://Textures/farmer down/farmer_down2.png"
-source_md5="a2e4e8214d654900aedf53e153cd19f0"
+source_file="res://Textures/Farmer side/farmer side2.png"
+source_md5="7f193cf65fcd628a20fd68fdc27abc28"
 
-dest_files=[ "res://.import/farmer_down2.png-bb19902352c2132a5983bac3be8c8c8a.stex" ]
-dest_md5="dbd6dc972462e66668a7e713a3c66d42"
+dest_files=[ "res://.import/farmer side2.png-8fd6168a05cf3ec1d4d996919651fe3f.stex" ]
+dest_md5="b9e5ab87b989b467adc374259718107c"
 
 [params]
 
