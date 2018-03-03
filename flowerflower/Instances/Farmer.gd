@@ -3,30 +3,43 @@ extends KinematicBody2D
 export var pix_per_sec = 128
 const dx = 1
 const dy = 1
+const start_pos = Vector2(384,352)
 
 var player
+var velocity = Vector2()
+
+var ORIENTATION = ""
+var PLAYERSTATE = ""
 
 func _ready():
 	player = find_node("Farmer")
 	set_physics_process(true)
 	
+	
+	
 func _physics_process(delta):
+	
+#MOVEMENT
 	var velocity = Vector2(0,0)
 	
 	if Input.is_key_pressed(KEY_W):
 		velocity.y -= dy
+		ORIENTATION = "up"
 	elif Input.is_key_pressed(KEY_S):
 		velocity.y += dy
+		ORIENTATION = "down"
 	elif Input.is_key_pressed(KEY_A):
 		velocity.x -= dx
+		ORIENTATION= "left"
 	elif Input.is_key_pressed(KEY_D):
 		velocity.x += dx
+		ORIENTATION = "right"
 	
-	
+#ANIMATIONS
 	if velocity.length() > 0:
+		PLAYERSTATE = "moving"
 		$AnimatedSprite.play()
-	if velocity == Vector2(0,0):
-		$AnimatedSprite.stop()
+	
 	if velocity.y > 0:
 		$AnimatedSprite.animation = "down"
 	if velocity.y < 0:
@@ -37,11 +50,22 @@ func _physics_process(delta):
 	if velocity.x < 0:
 		$AnimatedSprite.animation = "side"
 		$AnimatedSprite.flip_h = true
-	
-	
-	
 
-	
+#STOPPING ANIMATION
+	if velocity == Vector2(0,0):
+		PLAYERSTATE = "stationary"
+		if ORIENTATION == "down":
+			$AnimatedSprite.animation = "rest down"
+		elif ORIENTATION == "up":
+			$AnimatedSprite.animation = "rest up"
+		elif ORIENTATION == "right":
+			$AnimatedSprite.animation = "rest side"
+			$AnimatedSprite.flip_h = false
+		elif ORIENTATION == "left":
+			$AnimatedSprite.animation = "rest side"
+			$AnimatedSprite.flip_h = true
+		
+#MOVE
 	velocity = velocity.normalized()*pix_per_sec #normalise incase i add diagonal movement later
 	move_and_collide(velocity * delta)
-
+	

@@ -27,6 +27,11 @@ animations = [ {
 "name": "side",
 "speed": 5.0
 }, {
+"frames": [ ExtResource( 6 ) ],
+"loop": true,
+"name": "rest side",
+"speed": 5.0
+}, {
 "frames": [ ExtResource( 10 ) ],
 "loop": true,
 "name": "rest down",
@@ -49,7 +54,7 @@ custom_solver_bias = 0.0
 radius = 6.0
 height = 10.0
 
-[node name="Farmer" type="KinematicBody2D" index="0"]
+[node name="Farmer" type="KinematicBody2D"]
 
 position = Vector2( 384, 352 )
 input_pickable = false

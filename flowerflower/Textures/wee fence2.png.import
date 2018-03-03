@@ -1,0 +1,32 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/wee fence2.png-0a3db05ee7d37ce38cbf9bd3df9b344b.stex"
+
+[deps]
+
+source_file="res://Textures/wee fence2.png"
+source_md5="e50f4b7cf582c20207537179613a5525"
+
+dest_files=[ "res://.import/wee fence2.png-0a3db05ee7d37ce38cbf9bd3df9b344b.stex" ]
+dest_md5="d6aa6f0c36e74db02c68f269d1221103"
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=false
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0

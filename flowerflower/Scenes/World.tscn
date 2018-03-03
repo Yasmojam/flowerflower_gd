@@ -1,14 +1,16 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://Textures/grass.tres" type="TileSet" id=1]
+[ext_resource path="res://Instances/Happy grass.tres" type="TileSet" id=1]
 [ext_resource path="res://Instances/Dirt.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Instances/Farmer.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Instances/Blue Fence.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Instances/Red Fence.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Instances/Purple Fence.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Instances/Farmer.tscn" type="PackedScene" id=6]
 
-[node name="World" type="Node2D"]
+[node name="World" type="Node2D" index="0"]
 
-[node name="TileMap-grass" type="TileMap" parent="." index="0"]
+[node name="TileMap" type="TileMap" parent="." index="0"]
 
-position = Vector2( -64, 0 )
 scale = Vector2( 2, 2 )
 mode = 0
 tile_set = ExtResource( 1 )
@@ -26,8 +28,8 @@ collision_layer = 1
 collision_mask = 1
 occluder_light_mask = 1
 format = 1
-tile_data = PoolIntArray( 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 5, 0, 0, 6, 0, 0, 7, 0, 0, 8, 0, 0, 9, 0, 0, 10, 0, 0, 11, 0, 0, 12, 0, 0, 65537, 0, 0, 65538, 0, 0, 65539, 0, 0, 65540, 0, 0, 65541, 0, 0, 65542, 0, 0, 65543, 0, 0, 65544, 0, 0, 65545, 0, 0, 65546, 0, 0, 65547, 0, 0, 65548, 0, 0, 131073, 0, 0, 131074, 0, 0, 131075, 0, 0, 131076, 0, 0, 131077, 0, 0, 131078, 0, 0, 131079, 0, 0, 131080, 0, 0, 131081, 0, 0, 131082, 0, 0, 131083, 0, 0, 131084, 0, 0, 196609, 0, 0, 196610, 0, 0, 196611, 0, 0, 196612, 0, 0, 196613, 0, 0, 196614, 0, 0, 196615, 0, 0, 196616, 0, 0, 196617, 0, 0, 196618, 0, 0, 196619, 0, 0, 196620, 0, 0, 262145, 0, 0, 262146, 0, 0, 262147, 0, 0, 262148, 0, 0, 262149, 0, 0, 262150, 0, 0, 262151, 0, 0, 262152, 0, 0, 262153, 0, 0, 262154, 0, 0, 262155, 0, 0, 262156, 0, 0, 327681, 0, 0, 327682, 0, 0, 327683, 0, 0, 327684, 0, 0, 327685, 0, 0, 327686, 0, 0, 327687, 0, 0, 327688, 0, 0, 327689, 0, 0, 327690, 0, 0, 327691, 0, 0, 327692, 0, 0, 393217, 0, 0, 393218, 0, 0, 393219, 0, 0, 393220, 0, 0, 393221, 0, 0, 393222, 0, 0, 393223, 0, 0, 393224, 0, 0, 393225, 0, 0, 393226, 0, 0, 393227, 0, 0, 393228, 0, 0, 458753, 0, 0, 458754, 0, 0, 458755, 0, 0, 458756, 0, 0, 458757, 0, 0, 458758, 0, 0, 458759, 0, 0, 458760, 0, 0, 458761, 0, 0, 458762, 0, 0, 458763, 0, 0, 458764, 0, 0, 524289, 0, 0, 524290, 0, 0, 524291, 0, 0, 524292, 0, 0, 524293, 0, 0, 524294, 0, 0, 524295, 0, 0, 524296, 0, 0, 524297, 0, 0, 524298, 0, 0, 524299, 0, 0, 524300, 0, 0, 589825, 0, 0, 589826, 0, 0, 589827, 0, 0, 589828, 0, 0, 589829, 0, 0, 589830, 0, 0, 589831, 0, 0, 589832, 0, 0, 589833, 0, 0, 589834, 0, 0, 589835, 0, 0, 589836, 0, 0, 655361, 0, 0, 655362, 0, 0, 655363, 0, 0, 655364, 0, 0, 655365, 0, 0, 655366, 0, 0, 655367, 0, 0, 655368, 0, 0, 655369, 0, 0, 655370, 0, 0, 655371, 0, 0, 655372, 0, 0 )
-_sections_unfolded = [ "Transform" ]
+tile_data = PoolIntArray( 0, 0, 0, 1, 1, 0, 2, 0, 0, 3, 1, 0, 4, 0, 0, 5, 1, 0, 6, 0, 0, 7, 1, 0, 8, 0, 0, 9, 1, 0, 10, 0, 0, 11, 1, 0, 65536, 2, 0, 65537, 0, 0, 65538, 2, 0, 65539, 0, 0, 65540, 2, 0, 65541, 0, 0, 65542, 2, 0, 65543, 0, 0, 65544, 2, 0, 65545, 0, 0, 65546, 2, 0, 65547, 0, 0, 131072, 0, 0, 131073, 3, 0, 131074, 0, 0, 131075, 3, 0, 131076, 0, 0, 131077, 3, 0, 131078, 0, 0, 131079, 3, 0, 131080, 0, 0, 131081, 3, 0, 131082, 0, 0, 131083, 3, 0, 196608, 1, 0, 196609, 0, 0, 196610, 1, 0, 196611, 0, 0, 196612, 1, 0, 196613, 0, 0, 196614, 1, 0, 196615, 0, 0, 196616, 1, 0, 196617, 0, 0, 196618, 1, 0, 196619, 0, 0, 262144, 0, 0, 262145, 2, 0, 262146, 0, 0, 262147, 2, 0, 262148, 0, 0, 262149, 2, 0, 262150, 0, 0, 262151, 2, 0, 262152, 0, 0, 262153, 2, 0, 262154, 0, 0, 262155, 2, 0, 327680, 3, 0, 327681, 0, 0, 327682, 3, 0, 327683, 0, 0, 327684, 3, 0, 327685, 0, 0, 327686, 3, 0, 327687, 0, 0, 327688, 3, 0, 327689, 0, 0, 327690, 3, 0, 327691, 0, 0, 393216, 0, 0, 393217, 1, 0, 393218, 0, 0, 393219, 1, 0, 393220, 0, 0, 393221, 1, 0, 393222, 0, 0, 393223, 1, 0, 393224, 0, 0, 393225, 1, 0, 393226, 0, 0, 393227, 1, 0, 458752, 2, 0, 458753, 0, 0, 458754, 2, 0, 458755, 0, 0, 458756, 2, 0, 458757, 0, 0, 458758, 2, 0, 458759, 0, 0, 458760, 2, 0, 458761, 0, 0, 458762, 2, 0, 458763, 0, 0, 524288, 0, 0, 524289, 3, 0, 524290, 0, 0, 524291, 3, 0, 524292, 0, 0, 524293, 3, 0, 524294, 0, 0, 524295, 3, 0, 524296, 0, 0, 524297, 3, 0, 524298, 0, 0, 524299, 3, 0, 589824, 1, 0, 589825, 0, 0, 589826, 1, 0, 589827, 0, 0, 589828, 1, 0, 589829, 0, 0, 589830, 1, 0, 589831, 0, 0, 589832, 1, 0, 589833, 0, 0, 589834, 1, 0, 589835, 0, 0, 655360, 0, 0, 655361, 2, 0, 655362, 0, 0, 655363, 2, 0, 655364, 0, 0, 655365, 2, 0, 655366, 0, 0, 655367, 2, 0, 655368, 0, 0, 655369, 2, 0, 655370, 0, 0, 655371, 2, 0, 720896, 3, 0, 720897, 0, 0, 720898, 3, 0, 720899, 0, 0, 720900, 3, 0, 720901, 0, 0, 720902, 3, 0, 720903, 0, 0, 720904, 3, 0, 720905, 0, 0, 720906, 3, 0, 720907, 0, 0 )
+_sections_unfolded = [ "Cell", "Transform" ]
 
 [node name="Boundary" type="StaticBody2D" parent="." index="1"]
 
@@ -42,12 +44,12 @@ bounce = 0.0
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Boundary" index="0"]
 
 build_mode = 0
-polygon = PoolVector2Array( 768, 0, 864, 0, 864, 800, -96, 800, -96, -96, 864, -96, 864, 0, 0, 0, 0, 704, 768, 704 )
+polygon = PoolVector2Array( 768, 0, 864, 0, 864, 864, -96, 864, -96, -96, 864, -96, 864, 0, 0, 0, 0, 768, 768, 768 )
 
 [node name="All the dirt" type="Node2D" parent="." index="2"]
 
 editor/display_folded = true
-position = Vector2( 32, 32 )
+position = Vector2( 32, 65 )
 
 [node name="Dirt" parent="All the dirt" index="0" instance=ExtResource( 2 )]
 
@@ -145,11 +147,117 @@ position = Vector2( 192, 352 )
 
 position = Vector2( 256, 352 )
 
-[node name="Farmer" type="Node2D" parent="." index="3"]
+[node name="Blue Fences" type="Node2D" parent="." index="3"]
 
 editor/display_folded = true
 
-[node name="Farmer" parent="Farmer" index="0" instance=ExtResource( 3 )]
+[node name="Blue Fence" parent="Blue Fences" index="0" instance=ExtResource( 3 )]
+
+position = Vector2( 32, 32 )
+
+[node name="Blue Fence2" parent="Blue Fences" index="1" instance=ExtResource( 3 )]
+
+position = Vector2( 352, 32 )
+
+[node name="Blue Fence3" parent="Blue Fences" index="2" instance=ExtResource( 3 )]
+
+position = Vector2( 672, 32 )
+
+[node name="Blue Fence4" parent="Blue Fences" index="3" instance=ExtResource( 3 )]
+
+position = Vector2( 736, 288 )
+
+[node name="Blue Fence5" parent="Blue Fences" index="4" instance=ExtResource( 3 )]
+
+position = Vector2( 736, 736 )
+
+[node name="Blue Fence6" parent="Blue Fences" index="5" instance=ExtResource( 3 )]
+
+position = Vector2( 416, 736 )
+
+[node name="Blue Fence7" parent="Blue Fences" index="6" instance=ExtResource( 3 )]
+
+position = Vector2( 96, 736 )
+
+[node name="Blue Fence8" parent="Blue Fences" index="7" instance=ExtResource( 3 )]
+
+position = Vector2( 32, 480 )
+
+[node name="Red Fences" type="Node2D" parent="." index="4"]
+
+editor/display_folded = true
+
+[node name="Red Fence" parent="Red Fences" index="0" instance=ExtResource( 4 )]
+
+position = Vector2( 96, 32 )
+
+[node name="Red Fence2" parent="Red Fences" index="1" instance=ExtResource( 4 )]
+
+position = Vector2( 416, 32 )
+
+[node name="Red Fence3" parent="Red Fences" index="2" instance=ExtResource( 4 )]
+
+position = Vector2( 736, 32 )
+
+[node name="Red Fence4" parent="Red Fences" index="3" instance=ExtResource( 4 )]
+
+position = Vector2( 736, 480 )
+
+[node name="Red Fence5" parent="Red Fences" index="4" instance=ExtResource( 4 )]
+
+position = Vector2( 672, 736 )
+
+[node name="Red Fence6" parent="Red Fences" index="5" instance=ExtResource( 4 )]
+
+position = Vector2( 352, 736 )
+
+[node name="Red Fence7" parent="Red Fences" index="6" instance=ExtResource( 4 )]
+
+position = Vector2( 32, 736 )
+
+[node name="Red Fence8" parent="Red Fences" index="7" instance=ExtResource( 4 )]
+
+position = Vector2( 32, 288 )
+
+[node name="Purple Fences" type="Node2D" parent="." index="5"]
+
+editor/display_folded = true
+
+[node name="Orange Fence" parent="Purple Fences" index="0" instance=ExtResource( 5 )]
+
+position = Vector2( 160, 32 )
+
+[node name="Orange Fence2" parent="Purple Fences" index="1" instance=ExtResource( 5 )]
+
+position = Vector2( 608, 32 )
+
+[node name="Orange Fence3" parent="Purple Fences" index="2" instance=ExtResource( 5 )]
+
+position = Vector2( 736, 96 )
+
+[node name="Orange Fence4" parent="Purple Fences" index="3" instance=ExtResource( 5 )]
+
+position = Vector2( 736, 672 )
+
+[node name="Orange Fence5" parent="Purple Fences" index="4" instance=ExtResource( 5 )]
+
+position = Vector2( 608, 736 )
+
+[node name="Orange Fence6" parent="Purple Fences" index="5" instance=ExtResource( 5 )]
+
+position = Vector2( 160, 736 )
+
+[node name="Orange Fence7" parent="Purple Fences" index="6" instance=ExtResource( 5 )]
+
+position = Vector2( 32, 672 )
+
+[node name="Orange Fence8" parent="Purple Fences" index="7" instance=ExtResource( 5 )]
+
+position = Vector2( 32, 96 )
+
+[node name="Farmer" type="Node2D" parent="." index="6"]
+
+[node name="Farmer" parent="Farmer" index="0" instance=ExtResource( 6 )]
 
 pix_per_sec = 128
 

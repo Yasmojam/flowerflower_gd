@@ -1,0 +1,3 @@
+enemies
+slugs 1x click kill
+snails 1x disable & crck shell 1x click kill
