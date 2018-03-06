@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Instances/Happy grass.tres" type="TileSet" id=1]
 [ext_resource path="res://Instances/Dirt.tscn" type="PackedScene" id=2]
@@ -6,8 +6,11 @@
 [ext_resource path="res://Instances/Red Fence.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Instances/Purple Fence.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Instances/Farmer.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Instances/Slug.tscn" type="PackedScene" id=7]
 
-[node name="World" type="Node2D" index="0"]
+[node name="World" type="Node2D"]
+
+_sections_unfolded = [ "Transform" ]
 
 [node name="TileMap" type="TileMap" parent="." index="0"]
 
@@ -46,7 +49,9 @@ bounce = 0.0
 build_mode = 0
 polygon = PoolVector2Array( 768, 0, 864, 0, 864, 864, -96, 864, -96, -96, 864, -96, 864, 0, 0, 0, 0, 768, 768, 768 )
 
-[node name="All the dirt" type="Node2D" parent="." index="2"]
+[node name="All the dirt" type="Node2D" parent="." index="2" groups=[
+"Dirt",
+]]
 
 editor/display_folded = true
 position = Vector2( 32, 65 )
@@ -260,5 +265,11 @@ position = Vector2( 32, 96 )
 [node name="Farmer" parent="Farmer" index="0" instance=ExtResource( 6 )]
 
 pix_per_sec = 128
+
+[node name="Slug" parent="." index="7" instance=ExtResource( 7 )]
+
+visible = false
+position = Vector2( 62.5908, 206.366 )
+scale = Vector2( 2, 2 )
 
 

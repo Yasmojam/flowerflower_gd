@@ -1,0 +1,32 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/dirt5.png-54b9f3f49549bb610eb88348b6cb237a.stex"
+
+[deps]
+
+source_file="res://Textures/Dirt and Flowers/dirt5.png"
+source_md5="e17295bdeb6e571a547dbddf96019646"
+
+dest_files=[ "res://.import/dirt5.png-54b9f3f49549bb610eb88348b6cb237a.stex" ]
+dest_md5="d97ef031fc3fa2de1a2082b30a6ca43e"
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=false
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0
