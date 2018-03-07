@@ -1,50 +1,50 @@
 [gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://Instances/Farmer.gd" type="Script" id=1]
-[ext_resource path="res://Textures/Farmer side/farmer side1.png" type="Texture" id=2]
-[ext_resource path="res://Textures/farmer down/farmer_down1.png" type="Texture" id=3]
-[ext_resource path="res://Textures/farmer down/farmer_down2.png" type="Texture" id=4]
-[ext_resource path="res://Textures/farmer down/farmer_down3.png" type="Texture" id=5]
-[ext_resource path="res://Textures/farmer down/farmer_down4.png" type="Texture" id=6]
-[ext_resource path="res://Textures/farmer up/farmer up1.png" type="Texture" id=7]
-[ext_resource path="res://Textures/farmer up/farmer up2.png" type="Texture" id=8]
-[ext_resource path="res://Textures/farmer up/farmer up3.png" type="Texture" id=9]
-[ext_resource path="res://Textures/farmer up/farmer up4.png" type="Texture" id=10]
-[ext_resource path="res://Textures/Farmer side/farmer side2.png" type="Texture" id=11]
-[ext_resource path="res://Textures/Farmer side/farmer side3.png" type="Texture" id=12]
-[ext_resource path="res://Textures/Farmer side/farmer side4.png" type="Texture" id=13]
+[ext_resource path="res://Textures/farmer up/farmer up1.png" type="Texture" id=2]
+[ext_resource path="res://Textures/farmer up/farmer up2.png" type="Texture" id=3]
+[ext_resource path="res://Textures/farmer up/farmer up3.png" type="Texture" id=4]
+[ext_resource path="res://Textures/farmer up/farmer up4.png" type="Texture" id=5]
+[ext_resource path="res://Textures/Farmer side/farmer side1.png" type="Texture" id=6]
+[ext_resource path="res://Textures/Farmer side/farmer side2.png" type="Texture" id=7]
+[ext_resource path="res://Textures/Farmer side/farmer side3.png" type="Texture" id=8]
+[ext_resource path="res://Textures/Farmer side/farmer side4.png" type="Texture" id=9]
+[ext_resource path="res://Textures/farmer down/farmer_down1.png" type="Texture" id=10]
+[ext_resource path="res://Textures/farmer down/farmer_down2.png" type="Texture" id=11]
+[ext_resource path="res://Textures/farmer down/farmer_down3.png" type="Texture" id=12]
+[ext_resource path="res://Textures/farmer down/farmer_down4.png" type="Texture" id=13]
 
 [sub_resource type="SpriteFrames" id=1]
 
 animations = [ {
-"frames": [ ExtResource( 2 ) ],
-"loop": true,
-"name": "rest side",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 3 ) ],
-"loop": true,
-"name": "rest down",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ) ],
-"loop": true,
-"name": "down",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 7 ) ],
-"loop": true,
-"name": "rest up",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ) ],
+"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ) ],
 "loop": true,
 "name": "up",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 2 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ) ],
+"frames": [ ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ) ],
 "loop": true,
 "name": "side",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 6 ) ],
+"loop": true,
+"name": "rest side",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 2 ) ],
+"loop": true,
+"name": "rest up",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 10 ) ],
+"loop": true,
+"name": "rest down",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ) ],
+"loop": true,
+"name": "down",
 "speed": 5.0
 } ]
 
@@ -62,7 +62,7 @@ collision_layer = 1
 collision_mask = 1
 collision/safe_margin = 0.08
 script = ExtResource( 1 )
-_sections_unfolded = [ "Collision", "Material", "Pause", "Pickable", "Transform", "Visibility", "Z Index", "collision" ]
+_sections_unfolded = [ "Pause", "Transform", "Z Index" ]
 pix_per_sec = 200
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="." index="0"]
@@ -76,5 +76,6 @@ _sections_unfolded = [ "Transform" ]
 
 scale = Vector2( 2, 2 )
 shape = SubResource( 2 )
+_sections_unfolded = [ "Z Index" ]
 
 

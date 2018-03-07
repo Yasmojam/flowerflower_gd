@@ -1,23 +1,23 @@
 [gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Instances/Dirt.gd" type="Script" id=1]
-[ext_resource path="res://Textures/Dirt and Flowers/dirt1.png" type="Texture" id=2]
-[ext_resource path="res://Textures/Dirt and Flowers/dirt4.png" type="Texture" id=3]
+[ext_resource path="res://Textures/Dirt and Flowers/dirt5.png" type="Texture" id=2]
+[ext_resource path="res://Textures/Dirt and Flowers/dirt1.png" type="Texture" id=3]
 [ext_resource path="res://Textures/Dirt and Flowers/dirt2.png" type="Texture" id=4]
 [ext_resource path="res://Textures/Dirt and Flowers/dirt3.png" type="Texture" id=5]
-[ext_resource path="res://Textures/Dirt and Flowers/dirt5.png" type="Texture" id=6]
+[ext_resource path="res://Textures/Dirt and Flowers/dirt4.png" type="Texture" id=6]
 
 [sub_resource type="SpriteFrames" id=1]
 
 animations = [ {
 "frames": [ ExtResource( 2 ) ],
 "loop": true,
-"name": "Dirt",
+"name": "Flower",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 3 ) ],
 "loop": true,
-"name": "Budding",
+"name": "Dirt",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 4 ), ExtResource( 5 ) ],
@@ -27,7 +27,7 @@ animations = [ {
 }, {
 "frames": [ ExtResource( 6 ) ],
 "loop": true,
-"name": "Flower",
+"name": "Budding",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 4 ) ],
@@ -41,43 +41,26 @@ animations = [ {
 custom_solver_bias = 0.0
 extents = Vector2( 32, 32 )
 
-[node name="Dirt" type="RigidBody2D" index="0"]
+[node name="Dirt" type="Area2D" index="0"]
 
 position = Vector2( 32, 32 )
 input_pickable = true
-collision_layer = 1
-collision_mask = 1
-mode = 1
-mass = 1.0
-friction = 1.0
-bounce = 0.0
-gravity_scale = 1.0
-custom_integrator = false
-continuous_cd = 0
-contacts_reported = 0
-contact_monitor = false
-sleeping = false
-can_sleep = true
-linear_velocity = Vector2( 0, 0 )
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
 linear_damp = -1.0
-angular_velocity = 0.0
 angular_damp = -1.0
+audio_bus_override = false
+audio_bus_name = "Master"
 script = ExtResource( 1 )
+_sections_unfolded = [ "Audio Bus", "Collision" ]
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="." index="0"]
 
 scale = Vector2( 2, 2 )
 frames = SubResource( 1 )
 animation = "Dirt"
-_sections_unfolded = [ "Transform" ]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
-
-shape = SubResource( 2 )
-disabled = true
-_sections_unfolded = [ "Transform" ]
-
-[node name="Seed to Sprout" type="Timer" parent="." index="2"]
+[node name="Seed to Sprout" type="Timer" parent="." index="1"]
 
 process_mode = 1
 wait_time = 3.0
@@ -85,19 +68,23 @@ one_shot = true
 autostart = false
 _sections_unfolded = [ "Pause" ]
 
-[node name="Sprout to Bud" type="Timer" parent="." index="3"]
+[node name="Sprout to Bud" type="Timer" parent="." index="2"]
 
 process_mode = 1
 wait_time = 2.0
 one_shot = true
 autostart = false
 
-[node name="Bud to Flower" type="Timer" parent="." index="4"]
+[node name="Bud to Flower" type="Timer" parent="." index="3"]
 
 process_mode = 1
 wait_time = 4.0
 one_shot = true
 autostart = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="4"]
+
+shape = SubResource( 2 )
 
 [connection signal="input_event" from="." to="." method="_on_Dirt_input_event"]
 
