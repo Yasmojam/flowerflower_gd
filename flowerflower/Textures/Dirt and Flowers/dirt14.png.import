@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/dirt5.png-54b9f3f49549bb610eb88348b6cb237a.stex"
+path="res://.import/dirt14.png-53843881438bc2fdcbe6f7bd72ba3b75.stex"
 
 [deps]
 
-source_file="res://Textures/Dirt and Flowers/dirt5.png"
-source_md5="12f2e1db07e4f80af288ed4cbd3555f9"
+source_file="res://Textures/Dirt and Flowers/dirt14.png"
+source_md5="e8012e6bc16efce52a44183d1fa3d03d"
 
-dest_files=[ "res://.import/dirt5.png-54b9f3f49549bb610eb88348b6cb237a.stex" ]
-dest_md5="7d83952f505c8102ef0ee4096463ac6d"
+dest_files=[ "res://.import/dirt14.png-53843881438bc2fdcbe6f7bd72ba3b75.stex" ]
+dest_md5="139423d126fe888cf86f7c7f7d69a86a"
 
 [params]
 

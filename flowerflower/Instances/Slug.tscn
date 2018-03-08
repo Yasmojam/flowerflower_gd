@@ -1,12 +1,15 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Slug.gd" type="Script" id=1]
-[ext_resource path="res://Textures/slug.png" type="Texture" id=2]
+[ext_resource path="res://Textures/Slug/Slug1.png" type="Texture" id=2]
+[ext_resource path="res://Textures/Slug/Slug2.png" type="Texture" id=3]
+[ext_resource path="res://Textures/Slug/Slug3.png" type="Texture" id=4]
+[ext_resource path="res://Textures/Slug/Slug4.png" type="Texture" id=5]
 
 [sub_resource type="SpriteFrames" id=1]
 
 animations = [ {
-"frames": [ ExtResource( 2 ) ],
+"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ) ],
 "loop": true,
 "name": "Slug",
 "speed": 5.0
@@ -17,7 +20,7 @@ animations = [ {
 custom_solver_bias = 0.0
 extents = Vector2( 10, 10 )
 
-[node name="Slug" type="KinematicBody2D"]
+[node name="Slug" type="KinematicBody2D" index="0"]
 
 input_pickable = false
 collision_layer = 1
@@ -25,16 +28,18 @@ collision_mask = 1
 collision/safe_margin = 0.08
 script = ExtResource( 1 )
 _sections_unfolded = [ "Transform" ]
+pix_per_sec = 32
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="." index="0"]
 
 frames = SubResource( 1 )
 animation = "Slug"
+_sections_unfolded = [ "Transform" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
 
-position = Vector2( -0.924398, 9.09672 )
-scale = Vector2( 1.41825, 0.50747 )
+position = Vector2( -0.986188, 0.041339 )
+scale = Vector2( 3.07783, 0.505608 )
 shape = SubResource( 2 )
 _sections_unfolded = [ "Transform" ]
 

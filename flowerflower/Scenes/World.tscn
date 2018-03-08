@@ -8,7 +8,7 @@
 [ext_resource path="res://Instances/Farmer.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Instances/Slug.tscn" type="PackedScene" id=7]
 
-[node name="World" type="Node2D"]
+[node name="World" type="Node2D" index="0"]
 
 _sections_unfolded = [ "Transform" ]
 
@@ -266,10 +266,10 @@ position = Vector2( 32, 96 )
 
 pix_per_sec = 128
 
-[node name="Slug" parent="." index="7" instance=ExtResource( 7 )]
+[node name="All the Slugs!!" type="Node2D" parent="." index="7"]
 
-visible = false
-position = Vector2( 62.5908, 206.366 )
-scale = Vector2( 2, 2 )
+[node name="Slug" parent="All the Slugs!!" index="0" instance=ExtResource( 7 )]
+
+position = Vector2( 33.4745, 160.033 )
 
 

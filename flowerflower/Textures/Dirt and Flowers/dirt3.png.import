@@ -7,10 +7,10 @@ path="res://.import/dirt3.png-ba7f27d95234839679d5c67cbfa91221.stex"
 [deps]
 
 source_file="res://Textures/Dirt and Flowers/dirt3.png"
-source_md5="12f2e1db07e4f80af288ed4cbd3555f9"
+source_md5="c2961d16618c999b383ffc95b7c74b1f"
 
 dest_files=[ "res://.import/dirt3.png-ba7f27d95234839679d5c67cbfa91221.stex" ]
-dest_md5="7d83952f505c8102ef0ee4096463ac6d"
+dest_md5="3a25cf1f90cc7d062217b128fedef611"
 
 [params]
 

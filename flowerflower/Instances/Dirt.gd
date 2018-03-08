@@ -36,10 +36,13 @@ func _physics_process(delta):
 	for body in overlapping_bodies:
 		if body.get_name() == "Farmer" and Input.is_key_pressed(KEY_E):
 			if PLANTSTAGE == 1: 
+				$AnimatedSprite.animation = "Wet Seeds"
 				seed_sprout.start() #if it is a ^^^^tile start the next stage timer
 			if PLANTSTAGE == 2:
+				$AnimatedSprite.animation = "Wet Sprout"
 				sprout_bud.start()
 			if PLANTSTAGE == 3:
+				$AnimatedSprite.animation = "Wet Bud"
 				bud_flower.start()
 			else:
 				return

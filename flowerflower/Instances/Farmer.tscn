@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://Instances/Farmer.gd" type="Script" id=1]
 [ext_resource path="res://Textures/farmer up/farmer up1.png" type="Texture" id=2]
@@ -13,6 +13,9 @@
 [ext_resource path="res://Textures/farmer down/farmer_down2.png" type="Texture" id=11]
 [ext_resource path="res://Textures/farmer down/farmer_down3.png" type="Texture" id=12]
 [ext_resource path="res://Textures/farmer down/farmer_down4.png" type="Texture" id=13]
+[ext_resource path="res://Textures/Watering can/Watering can2.png" type="Texture" id=14]
+[ext_resource path="res://Textures/Watering can/Watering can3.png" type="Texture" id=15]
+[ext_resource path="res://Textures/Watering can/Watering can1.png" type="Texture" id=16]
 
 [sub_resource type="SpriteFrames" id=1]
 
@@ -32,19 +35,34 @@ animations = [ {
 "name": "rest side",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 2 ) ],
-"loop": true,
-"name": "rest up",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 10 ) ],
 "loop": true,
 "name": "rest down",
 "speed": 5.0
 }, {
+"frames": [ ExtResource( 2 ) ],
+"loop": true,
+"name": "rest up",
+"speed": 5.0
+}, {
 "frames": [ ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ) ],
 "loop": true,
 "name": "down",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 14 ) ],
+"loop": true,
+"name": "watering up",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 15 ) ],
+"loop": true,
+"name": "watering side",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 16 ) ],
+"loop": true,
+"name": "watering down",
 "speed": 5.0
 } ]
 

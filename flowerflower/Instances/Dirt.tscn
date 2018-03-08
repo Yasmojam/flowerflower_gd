@@ -1,11 +1,19 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://Instances/Dirt.gd" type="Script" id=1]
-[ext_resource path="res://Textures/Dirt and Flowers/dirt5.png" type="Texture" id=2]
+[ext_resource path="res://Textures/Dirt and Flowers/dirt12.png" type="Texture" id=2]
 [ext_resource path="res://Textures/Dirt and Flowers/dirt1.png" type="Texture" id=3]
 [ext_resource path="res://Textures/Dirt and Flowers/dirt2.png" type="Texture" id=4]
-[ext_resource path="res://Textures/Dirt and Flowers/dirt3.png" type="Texture" id=5]
-[ext_resource path="res://Textures/Dirt and Flowers/dirt4.png" type="Texture" id=6]
+[ext_resource path="res://Textures/Dirt and Flowers/dirt8.png" type="Texture" id=5]
+[ext_resource path="res://Textures/Dirt and Flowers/dirt5.png" type="Texture" id=6]
+[ext_resource path="res://Textures/Dirt and Flowers/dirt3.png" type="Texture" id=7]
+[ext_resource path="res://Textures/Dirt and Flowers/dirt4.png" type="Texture" id=8]
+[ext_resource path="res://Textures/Dirt and Flowers/dirt13.png" type="Texture" id=9]
+[ext_resource path="res://Textures/Dirt and Flowers/dirt14.png" type="Texture" id=10]
+[ext_resource path="res://Textures/Dirt and Flowers/dirt6.png" type="Texture" id=11]
+[ext_resource path="res://Textures/Dirt and Flowers/dirt7.png" type="Texture" id=12]
+[ext_resource path="res://Textures/Dirt and Flowers/dirt10.png" type="Texture" id=13]
+[ext_resource path="res://Textures/Dirt and Flowers/dirt11.png" type="Texture" id=14]
 
 [sub_resource type="SpriteFrames" id=1]
 
@@ -20,19 +28,39 @@ animations = [ {
 "name": "Dirt",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 4 ), ExtResource( 5 ) ],
-"loop": false,
-"name": "Sprouting",
+"frames": [ ExtResource( 4 ) ],
+"loop": true,
+"name": "Seeds",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 6 ) ],
+"frames": [ ExtResource( 5 ) ],
 "loop": true,
 "name": "Budding",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 4 ) ],
+"frames": [ ExtResource( 6 ) ],
 "loop": true,
-"name": "Seeds",
+"name": "Sprouting",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 7 ), ExtResource( 8 ) ],
+"loop": false,
+"name": "Wet Seeds",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 9 ), ExtResource( 10 ) ],
+"loop": false,
+"name": "Wet Flowers",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 11 ), ExtResource( 12 ) ],
+"loop": false,
+"name": "Wet Sprout",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 13 ), ExtResource( 14 ) ],
+"loop": false,
+"name": "Wet Bud",
 "speed": 5.0
 } ]
 

@@ -56,15 +56,27 @@ func _physics_process(delta):
 		PLAYERSTATE = "stationary"
 		if ORIENTATION == "down":
 			$AnimatedSprite.animation = "rest down"
+		if ORIENTATION == "down" and Input.is_key_pressed(KEY_E):
+			$AnimatedSprite.animation = "watering down"
+			
 		elif ORIENTATION == "up":
 			$AnimatedSprite.animation = "rest up"
+		if ORIENTATION == "up" and Input.is_key_pressed(KEY_E):
+			$AnimatedSprite.animation = "watering up"
+			
 		elif ORIENTATION == "right":
 			$AnimatedSprite.animation = "rest side"
 			$AnimatedSprite.flip_h = false
+		if ORIENTATION == "right" and Input.is_key_pressed(KEY_E):
+			$AnimatedSprite.animation = "watering side"
+			$AnimatedSprite.flip_h = false
+		
 		elif ORIENTATION == "left":
 			$AnimatedSprite.animation = "rest side"
 			$AnimatedSprite.flip_h = true
-		
+		if ORIENTATION == "left" and Input.is_key_pressed(KEY_E):
+			$AnimatedSprite.animation = "watering side"
+			$AnimatedSprite.flip_h = true
 #MOVE
 	velocity = velocity.normalized()*pix_per_sec #normalise incase i add diagonal movement later
 	move_and_collide(velocity * delta)
