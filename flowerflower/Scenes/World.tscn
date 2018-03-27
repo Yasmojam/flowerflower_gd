@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Instances/Happy grass.tres" type="TileSet" id=1]
 [ext_resource path="res://Instances/Dirt.tscn" type="PackedScene" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://Instances/Purple Fence.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Instances/Farmer.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Instances/Slug.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Instances/Game timer.tscn" type="PackedScene" id=8]
 
 [node name="World" type="Node2D" index="0"]
 
@@ -271,5 +272,7 @@ pix_per_sec = 128
 [node name="Slug" parent="All the Slugs!!" index="0" instance=ExtResource( 7 )]
 
 position = Vector2( 33.4745, 160.033 )
+
+[node name="Game timer" parent="All the Slugs!!" index="1" instance=ExtResource( 8 )]
 
 

@@ -1,6 +1,6 @@
 [gd_scene load_steps=17 format=2]
 
-[ext_resource path="res://Instances/Dirt.gd" type="Script" id=1]
+[ext_resource path="res://Scripts/Dirt.gd" type="Script" id=1]
 [ext_resource path="res://Textures/Dirt and Flowers/dirt12.png" type="Texture" id=2]
 [ext_resource path="res://Textures/Dirt and Flowers/dirt1.png" type="Texture" id=3]
 [ext_resource path="res://Textures/Dirt and Flowers/dirt2.png" type="Texture" id=4]
@@ -14,6 +14,7 @@
 [ext_resource path="res://Textures/Dirt and Flowers/dirt7.png" type="Texture" id=12]
 [ext_resource path="res://Textures/Dirt and Flowers/dirt10.png" type="Texture" id=13]
 [ext_resource path="res://Textures/Dirt and Flowers/dirt11.png" type="Texture" id=14]
+
 
 [sub_resource type="SpriteFrames" id=1]
 

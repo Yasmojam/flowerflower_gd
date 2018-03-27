@@ -1,6 +1,6 @@
 [gd_scene load_steps=19 format=2]
 
-[ext_resource path="res://Instances/Farmer.gd" type="Script" id=1]
+[ext_resource path="res://Scripts/Farmer.gd" type="Script" id=1]
 [ext_resource path="res://Textures/farmer up/farmer up1.png" type="Texture" id=2]
 [ext_resource path="res://Textures/farmer up/farmer up2.png" type="Texture" id=3]
 [ext_resource path="res://Textures/farmer up/farmer up3.png" type="Texture" id=4]
@@ -16,6 +16,7 @@
 [ext_resource path="res://Textures/Watering can/Watering can2.png" type="Texture" id=14]
 [ext_resource path="res://Textures/Watering can/Watering can3.png" type="Texture" id=15]
 [ext_resource path="res://Textures/Watering can/Watering can1.png" type="Texture" id=16]
+
 
 [sub_resource type="SpriteFrames" id=1]
 
