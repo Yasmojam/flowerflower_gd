@@ -44,6 +44,9 @@ func _physics_process(delta):
 			if PLANTSTAGE == 3:
 				$AnimatedSprite.animation = "Wet Bud"
 				bud_flower.start()
+			if PLANTSTAGE == 4:
+				$AnimatedSprite.animation = "Dirt"
+				PLANTSTAGE = 0
 			else:
 				return
 

@@ -1,0 +1,32 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/TIMES UP16.png-52ce38611f84cd6f0aae839abcbca84d.stex"
+
+[deps]
+
+source_file="res://Textures/Times up/TIMES UP16.png"
+source_md5="e8ca1a044f70c2a7a92e595328180dc2"
+
+dest_files=[ "res://.import/TIMES UP16.png-52ce38611f84cd6f0aae839abcbca84d.stex" ]
+dest_md5="af3352ea5881f71656a3ba4e358fab87"
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=false
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0
