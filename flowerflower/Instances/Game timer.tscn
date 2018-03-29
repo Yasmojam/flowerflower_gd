@@ -29,7 +29,7 @@ animations = [ {
 } ]
 _sections_unfolded = [ "Resource" ]
 
-[node name="Game timer" type="CanvasLayer" index="0"]
+[node name="Game timer" type="CanvasLayer"]
 
 layer = 1
 offset = Vector2( 0, 0 )
