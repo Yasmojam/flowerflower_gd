@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://Scripts/Farmer.gd" type="Script" id=1]
 [ext_resource path="res://Textures/Farmer side/farmer side1.png" type="Texture" id=2]
@@ -6,16 +6,20 @@
 [ext_resource path="res://Textures/farmer down/farmer_down2.png" type="Texture" id=4]
 [ext_resource path="res://Textures/farmer down/farmer_down3.png" type="Texture" id=5]
 [ext_resource path="res://Textures/farmer down/farmer_down4.png" type="Texture" id=6]
-[ext_resource path="res://Textures/Watering can/Watering can2.png" type="Texture" id=7]
-[ext_resource path="res://Textures/farmer up/farmer up1.png" type="Texture" id=8]
-[ext_resource path="res://Textures/Watering can/Watering can3.png" type="Texture" id=9]
-[ext_resource path="res://Textures/Watering can/Watering can1.png" type="Texture" id=10]
+[ext_resource path="res://Textures/Watering can/Watering can3.png" type="Texture" id=7]
+[ext_resource path="res://Textures/Watering can/Watering can1.png" type="Texture" id=8]
+[ext_resource path="res://Textures/Watering can/Watering can2.png" type="Texture" id=9]
+[ext_resource path="res://Textures/farmer up/farmer up1.png" type="Texture" id=10]
 [ext_resource path="res://Textures/farmer up/farmer up2.png" type="Texture" id=11]
 [ext_resource path="res://Textures/farmer up/farmer up3.png" type="Texture" id=12]
 [ext_resource path="res://Textures/farmer up/farmer up4.png" type="Texture" id=13]
 [ext_resource path="res://Textures/Farmer side/farmer side2.png" type="Texture" id=14]
 [ext_resource path="res://Textures/Farmer side/farmer side3.png" type="Texture" id=15]
 [ext_resource path="res://Textures/Farmer side/farmer side4.png" type="Texture" id=16]
+[ext_resource path="res://Textures/Attack/spin1.png" type="Texture" id=17]
+[ext_resource path="res://Textures/Attack/spin2.png" type="Texture" id=18]
+[ext_resource path="res://Textures/Attack/spin3.png" type="Texture" id=19]
+[ext_resource path="res://Textures/Attack/spin4.png" type="Texture" id=20]
 
 [sub_resource type="SpriteFrames" id=1]
 
@@ -37,25 +41,25 @@ animations = [ {
 }, {
 "frames": [ ExtResource( 7 ) ],
 "loop": true,
-"name": "watering up",
+"name": "watering side",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 8 ) ],
 "loop": true,
-"name": "rest up",
+"name": "watering down",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 9 ) ],
 "loop": true,
-"name": "watering side",
+"name": "watering up",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 10 ) ],
 "loop": true,
-"name": "watering down",
+"name": "rest up",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 8 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ) ],
+"frames": [ ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ) ],
 "loop": true,
 "name": "up",
 "speed": 5.0
@@ -66,13 +70,22 @@ animations = [ {
 "speed": 5.0
 } ]
 
+[sub_resource type="SpriteFrames" id=3]
+
+animations = [ {
+"frames": [ ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ) ],
+"loop": true,
+"name": "scythe",
+"speed": 10.0
+} ]
+
 [sub_resource type="CapsuleShape2D" id=2]
 
 custom_solver_bias = 0.0
 radius = 6.0
 height = 10.0
 
-[node name="Farmer" type="KinematicBody2D"]
+[node name="Farmer" type="KinematicBody2D" index="0"]
 
 position = Vector2( 384, 352 )
 input_pickable = false
@@ -90,10 +103,21 @@ frames = SubResource( 1 )
 animation = "down"
 _sections_unfolded = [ "Transform" ]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
+[node name="Scythe" type="AnimatedSprite" parent="." index="1"]
+
+visible = false
+scale = Vector2( 2, 2 )
+frames = SubResource( 3 )
+animation = "scythe"
+frame = 1
+_sections_unfolded = [ "Transform", "Visibility" ]
+
+[node name="hitbox" type="CollisionShape2D" parent="." index="2"]
 
 scale = Vector2( 2, 2 )
 shape = SubResource( 2 )
-_sections_unfolded = [ "Z Index" ]
+_sections_unfolded = [ "Transform", "Z Index" ]
+
+[connection signal="animation_finished" from="Scythe" to="." method="_on_Scythe_animation_finished"]
 
 

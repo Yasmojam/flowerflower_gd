@@ -269,7 +269,11 @@ position = Vector2( 32, 96 )
 
 pix_per_sec = 128
 
-[node name="All the Slugs!!" type="Node2D" parent="." index="8"]
+[node name="All the Slugs!!" type="Node2D" parent="." index="8" groups=[
+"enemy",
+]]
+
+editor/display_folded = true
 
 [node name="Slug" parent="All the Slugs!!" index="0" instance=ExtResource( 8 )]
 

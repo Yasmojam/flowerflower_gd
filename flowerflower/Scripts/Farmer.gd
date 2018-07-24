@@ -5,20 +5,34 @@ const dx = 1
 const dy = 1
 const start_pos = Vector2(384,352)
 
-var player
+onready var player = find_node("Farmer")
+onready var hitbox = find_node("hitbox")
+
+onready var attack = 0 #idle
+
 var velocity = Vector2()
 
 var ORIENTATION = ""
 var PLAYERSTATE = ""
 
+
+
 func _ready():
-	player = find_node("Farmer")
 	set_physics_process(true)
 	
-	
-	
+#ATTACK
 func _physics_process(delta):
 	
+	if Input.is_key_pressed(KEY_SPACE):
+			attack = 1
+			hitbox.set_scale(Vector2(10,10))
+			$AnimatedSprite.visible = false
+			$Scythe.visible = true
+			$Scythe.play()
+			$Scythe.animation = "scythe"
+	else: 
+		attack = 0
+		
 #MOVEMENT
 	var velocity = Vector2(0,0)
 	
@@ -34,7 +48,7 @@ func _physics_process(delta):
 	elif Input.is_key_pressed(KEY_D):
 		velocity.x += dx
 		ORIENTATION = "right"
-	
+		
 #ANIMATIONS
 	if velocity.length() > 0:
 		PLAYERSTATE = "moving"
@@ -50,7 +64,7 @@ func _physics_process(delta):
 	if velocity.x < 0:
 		$AnimatedSprite.animation = "side"
 		$AnimatedSprite.flip_h = true
-
+			
 #STOPPING ANIMATION
 	if velocity == Vector2(0,0):
 		PLAYERSTATE = "stationary"
@@ -77,7 +91,21 @@ func _physics_process(delta):
 		if ORIENTATION == "left" and Input.is_key_pressed(KEY_E):
 			$AnimatedSprite.animation = "watering side"
 			$AnimatedSprite.flip_h = true
-#MOVE
+		
+
+		
+		#MOVE
 	velocity = velocity.normalized()*pix_per_sec #normalise incase i add diagonal movement later
 	move_and_collide(velocity * delta)
-	
+
+
+
+
+
+
+
+func _on_Scythe_animation_finished():
+	attack = 0
+	hitbox.set_scale(Vector2(2,2))
+	$Scythe.visible = false
+	$AnimatedSprite.visible = true

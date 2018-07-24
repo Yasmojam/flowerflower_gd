@@ -7,7 +7,7 @@ onready var sprout_bud = get_node("Sprout to Bud")
 onready var bud_flower = get_node("Bud to Flower")
 
 
-var PLANTSTAGE = 0
+onready var PLANTSTAGE = 0
 #stage 0 = dirt
 #stage 1 = seed
 #stage 2 = sprouting
@@ -19,12 +19,12 @@ func _ready():
 	set_physics_process(true)
 
 	
-func _on_Dirt_input_event(viewport, event, shape_idx): #allows for dirt to be clicked in collision box
-	if event is InputEventMouseButton and event.is_pressed() and PLANTSTAGE < 1:
-		$AnimatedSprite.play()
+#func _on_Dirt_input_event(viewport, event, shape_idx): #allows for dirt to be clicked in collision box
+	#if event is InputEventMouseButton and event.is_pressed() and PLANTSTAGE < 1:
+		#$AnimatedSprite.play()
 		
-		$AnimatedSprite.animation = "Seeds"
-		PLANTSTAGE = 1 #becomes a seeded dirt tile
+		#$AnimatedSprite.animation = "Seeds"
+		#PLANTSTAGE = 1 #becomes a seeded dirt tile
 
 		
 
@@ -34,19 +34,29 @@ func _physics_process(delta):
 		return
 	
 	for body in overlapping_bodies:
-		if body.get_name() == "Farmer" and Input.is_key_pressed(KEY_E):
-			if PLANTSTAGE == 1: 
-				$AnimatedSprite.animation = "Wet Seeds"
-				seed_sprout.start() #if it is a ^^^^tile start the next stage timer
-			if PLANTSTAGE == 2:
-				$AnimatedSprite.animation = "Wet Sprout"
-				sprout_bud.start()
-			if PLANTSTAGE == 3:
-				$AnimatedSprite.animation = "Wet Bud"
-				bud_flower.start()
-			if PLANTSTAGE == 4:
+		if body.get_name() == "Farmer":
+			if Input.is_key_pressed(KEY_Q) and PLANTSTAGE == 0:
+				$AnimatedSprite.play()
+				$AnimatedSprite.animation = "Seeds"
+				PLANTSTAGE = 1 #becomes a seeded dirt tile
+			
+			if Input.is_key_pressed(KEY_E):
+				if PLANTSTAGE == 1: 
+					$AnimatedSprite.animation = "Wet Seeds"
+					seed_sprout.start() #if it is a ^^^^tile start the next stage timer
+				if PLANTSTAGE == 2:
+					$AnimatedSprite.animation = "Wet Sprout"
+					sprout_bud.start()
+				if PLANTSTAGE == 3:
+					$AnimatedSprite.animation = "Wet Bud"
+					bud_flower.start()
+				else:
+					return
+						
+			if Input.is_key_pressed(KEY_SPACE) and PLANTSTAGE == 4: #Scythe
 				$AnimatedSprite.animation = "Dirt"
 				PLANTSTAGE = 0
+				
 			else:
 				return
 

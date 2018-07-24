@@ -5,15 +5,15 @@
 [ext_resource path="res://Textures/Dirt and Flowers/dirt11.png" type="Texture" id=3]
 [ext_resource path="res://Textures/Dirt and Flowers/dirt6.png" type="Texture" id=4]
 [ext_resource path="res://Textures/Dirt and Flowers/dirt7.png" type="Texture" id=5]
-[ext_resource path="res://Textures/Dirt and Flowers/dirt2.png" type="Texture" id=6]
-[ext_resource path="res://Textures/Dirt and Flowers/dirt13.png" type="Texture" id=7]
-[ext_resource path="res://Textures/Dirt and Flowers/dirt14.png" type="Texture" id=8]
-[ext_resource path="res://Textures/Dirt and Flowers/dirt8.png" type="Texture" id=9]
-[ext_resource path="res://Textures/Dirt and Flowers/dirt1.png" type="Texture" id=10]
-[ext_resource path="res://Textures/Dirt and Flowers/dirt3.png" type="Texture" id=11]
-[ext_resource path="res://Textures/Dirt and Flowers/dirt4.png" type="Texture" id=12]
-[ext_resource path="res://Textures/Dirt and Flowers/dirt12.png" type="Texture" id=13]
-[ext_resource path="res://Textures/Dirt and Flowers/dirt5.png" type="Texture" id=14]
+[ext_resource path="res://Textures/Dirt and Flowers/dirt13.png" type="Texture" id=6]
+[ext_resource path="res://Textures/Dirt and Flowers/dirt14.png" type="Texture" id=7]
+[ext_resource path="res://Textures/Dirt and Flowers/dirt1.png" type="Texture" id=8]
+[ext_resource path="res://Textures/Dirt and Flowers/dirt12.png" type="Texture" id=9]
+[ext_resource path="res://Textures/Dirt and Flowers/dirt5.png" type="Texture" id=10]
+[ext_resource path="res://Textures/Dirt and Flowers/dirt2.png" type="Texture" id=11]
+[ext_resource path="res://Textures/Dirt and Flowers/dirt3.png" type="Texture" id=12]
+[ext_resource path="res://Textures/Dirt and Flowers/dirt4.png" type="Texture" id=13]
+[ext_resource path="res://Textures/Dirt and Flowers/dirt8.png" type="Texture" id=14]
 
 [sub_resource type="SpriteFrames" id=1]
 
@@ -28,39 +28,39 @@ animations = [ {
 "name": "Wet Sprout",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 6 ) ],
-"loop": true,
-"name": "Seeds",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 7 ), ExtResource( 8 ) ],
+"frames": [ ExtResource( 6 ), ExtResource( 7 ) ],
 "loop": false,
 "name": "Wet Flowers",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 9 ) ],
-"loop": true,
-"name": "Budding",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 10 ) ],
+"frames": [ ExtResource( 8 ) ],
 "loop": true,
 "name": "Dirt",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 11 ), ExtResource( 12 ) ],
-"loop": false,
-"name": "Wet Seeds",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 13 ) ],
+"frames": [ ExtResource( 9 ) ],
 "loop": true,
 "name": "Flower",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 14 ) ],
+"frames": [ ExtResource( 10 ) ],
 "loop": true,
 "name": "Sprouting",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 11 ) ],
+"loop": true,
+"name": "Seeds",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 12 ), ExtResource( 13 ) ],
+"loop": false,
+"name": "Wet Seeds",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 14 ) ],
+"loop": true,
+"name": "Budding",
 "speed": 5.0
 } ]
 
@@ -69,7 +69,7 @@ animations = [ {
 custom_solver_bias = 0.0
 radius = 25.2551
 
-[node name="Dirt" type="Area2D" index="0"]
+[node name="Dirt" type="Area2D"]
 
 position = Vector2( 32, 32 )
 input_pickable = true
