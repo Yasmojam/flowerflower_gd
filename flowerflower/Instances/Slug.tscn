@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Scripts/Slug.gd" type="Script" id=1]
 [ext_resource path="res://Textures/Slug/Slug1.png" type="Texture" id=2]
@@ -14,12 +14,7 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=2]
-
-custom_solver_bias = 0.0
-extents = Vector2( 5.19757, 12.875 )
-
-[node name="Slug" type="KinematicBody2D" index="0"]
+[node name="Slug" type="KinematicBody2D"]
 
 scale = Vector2( 2, 2 )
 input_pickable = false
@@ -27,7 +22,6 @@ collision_layer = 1
 collision_mask = 1
 collision/safe_margin = 0.08
 script = ExtResource( 1 )
-_sections_unfolded = [ "Transform" ]
 pix_per_sec = 32
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="." index="0"]
@@ -36,11 +30,11 @@ frames = SubResource( 1 )
 animation = "Slug"
 _sections_unfolded = [ "Transform" ]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="." index="1"]
 
 position = Vector2( -0.670629, 5.56366 )
 scale = Vector2( 3.07783, 0.505608 )
-shape = SubResource( 2 )
-_sections_unfolded = [ "Transform" ]
+build_mode = 0
+polygon = PoolVector2Array( 0.525832, -29.0116, 1.60506, -21.2317, 1.54826, -11.7229, 0.951845, -11.3771, 0.980245, -7.91941, 0.611034, -6.19055, -2.11545, -5.84477, -3.30828, 0.0333738, -4.98393, 0.0333738, -5.66555, 5.56575, -4.58632, 10.9252, -2.39945, 11.271, -2.28585, 14.5559, 1.49146, 13.3457, 1.71867, 11.6168, 2.9683, 11.6168, 4.78596, 8.33194, 4.75755, -4.1159, 5.12676, -5.499, 4.61555, -12.0687, 4.61555, -26.0725, 3.28071, -34.0253, 2.7127, -31.2591, 2.8263, -26.4183, 3.53632, -24.6894, 2.11628, -24.6894, 2.03107, -29.5303, 0.241823, -32.6422 )
 
 

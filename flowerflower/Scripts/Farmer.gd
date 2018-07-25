@@ -25,7 +25,7 @@ func _physics_process(delta):
 	
 	if Input.is_key_pressed(KEY_SPACE):
 			attack = 1
-			hitbox.set_scale(Vector2(10,10))
+			hitbox.set_scale(Vector2(8,5))
 			$AnimatedSprite.visible = false
 			$Scythe.visible = true
 			$Scythe.play()
